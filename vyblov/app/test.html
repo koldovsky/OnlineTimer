@@ -1,0 +1,25 @@
+<!doctype html>
+<html data-ng-app="timerApp">
+    <head>
+        <title>Timer</title>
+        <link rel="stylesheet" href="css/app.css">
+
+        <script src="js/third.party/jquery-1.9.1.js"></script>
+        <script src="js/third.party/angular.js"></script>
+        <script src="js/third.party/angular-resource.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/controller/timerCtrl.js"></script>
+        <script src="js/components/timer.js"></script>
+    </head>
+
+    <body class='timer-app'>
+        <timer duration='10' autostart='true'></timer>
+        <footer data-ng-controller="TimerCtrl">
+            <button data-ng-click="restart()">Restart</button>
+            <button data-ng-click="toggleStop()">{{startStatus}}</button>
+            <div class='console'>{{timerStatus}}</div>
+        </footer>
+    </body>
+
+</html>
